@@ -31,7 +31,7 @@
                 this.letter = letter
             },
             playAudio() {
-                this.audioSrc = `http://img1.yunser.com/letter/${this.letter.toLowerCase()}.mp3`
+                this.audioSrc = `https://img1.yunser.com/letter/${this.letter.toLowerCase()}.mp3`
                 this.$nextTick(() => {
                     this.$refs.audio.play()
                 })
