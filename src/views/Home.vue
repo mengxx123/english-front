@@ -26,6 +26,12 @@
                 return this.letter.toLowerCase()
             }
         },
+        mounted() {
+            let data = this.$route.query.data
+            if (data) {
+                this.letter = data.charAt(0).toUpperCase()
+            }
+        },
         methods: {
             setLetter(letter) {
                 this.letter = letter
