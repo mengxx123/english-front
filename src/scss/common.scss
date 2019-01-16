@@ -4,3 +4,10 @@
     left: 0;
     width: 100%;
 }
+.ui-page-body {
+    -webkit-overflow-scrolling : touch;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+}

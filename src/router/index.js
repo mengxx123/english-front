@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Home = resolve => require(['@/views/Home'], resolve)
+const Card = resolve => require(['@/views/Card'], resolve)
+const PhoneticAlphabet = resolve => require(['@/views/PhoneticAlphabet'], resolve)
+const MemorizeWord = resolve => require(['@/views/MemorizeWord'], resolve)
 const About = resolve => require(['@/views/About'], resolve)
 
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
@@ -12,6 +15,18 @@ let routes = [
     {
         path: '/',
         component: Home
+    },
+    {
+        path: '/card',
+        component: Card
+    },
+    {
+        path: '/phonetic_alphabet',
+        component: PhoneticAlphabet
+    },
+    {
+        path: '/memorize_word',
+        component: MemorizeWord
     },
     {
         path: '/about',
