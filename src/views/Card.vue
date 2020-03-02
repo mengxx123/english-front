@@ -1,13 +1,15 @@
 <template>
     <my-page title="字母卡片">
-        <div class="card" @click="playAudio">
-            {{ letter }}<span class="lowercase">{{ lowerCase }}</span>
+        <div class="common-container container">
+            <div class="card" @click="playAudio">
+                {{ letter }}<span class="lowercase">{{ lowerCase }}</span>
+            </div>
+            <ul class="letter-list">
+                <li class="item"
+                    @click="setLetter(letter)"
+                    v-for="letter in letters">{{ letter }}</li>
+            </ul>
         </div>
-        <ul class="letter-list">
-            <li class="item"
-                @click="setLetter(letter)"
-                v-for="letter in letters">{{ letter }}</li>
-        </ul>
         <audio :src="audioSrc" ref="audio"></audio>
     </my-page>
 </template>

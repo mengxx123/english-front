@@ -1,11 +1,13 @@
 <template>
     <my-page title="背单词">
-        <div class="word">{{ word }}</div>
-        <pre class="desc" v-if="descVisible">{{ desc }}</pre>
-        <div class="btns">
-            <ui-raised-button class="btn" primary label="记得" @click="next" />
-            <ui-raised-button class="btn" secondary :label="this.descVisible ? '下一个' : '忘了'" @click="skip" />
-            <ui-raised-button class="btn" label="发音" @click="play" />
+        <div class="common-container container">
+            <div class="word">{{ word }}</div>
+            <pre class="desc" v-if="descVisible">{{ desc }}</pre>
+            <div class="btns">
+                <ui-raised-button class="btn" primary label="记得" @click="next" />
+                <ui-raised-button class="btn" secondary :label="this.descVisible ? '下一个' : '忘了'" @click="skip" />
+                <ui-raised-button class="btn" label="发音" @click="play" />
+            </div>
         </div>
         <audio :src="audioSrc" ref="audio"></audio>
     </my-page>
