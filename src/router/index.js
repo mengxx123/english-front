@@ -5,6 +5,7 @@ const Home = resolve => require(['@/views/Home'], resolve)
 const Card = resolve => require(['@/views/Card'], resolve)
 const PhoneticAlphabet = resolve => require(['@/views/PhoneticAlphabet'], resolve)
 const MemorizeWord = resolve => require(['@/views/MemorizeWord'], resolve)
+const OauthCallback = resolve => require(['@/views/oauth/Callback'], resolve)
 
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
@@ -15,6 +16,7 @@ let routes = [
         path: '/',
         component: Home
     },
+    { path: '/list', component: resolve => require(['@/views/List'], resolve) },
     {
         path: '/card',
         component: Card
@@ -26,6 +28,10 @@ let routes = [
     {
         path: '/memorize_word',
         component: MemorizeWord
+    },
+    {
+        path: '/oauth/callback',
+        component: OauthCallback
     },
     {
         path: '*',

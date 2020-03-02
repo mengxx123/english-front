@@ -7,12 +7,30 @@
 </template>
 
 <script>
+    /* eslint-disable */
     export default {
         data () {
             return {
                 groups: [
                     {
-                        // name: '基本',
+                        name: '单词',
+                        apps: [
+                            {
+                                name: '背单词',
+                                desc: '',
+                                icon: '/static/img/english.svg',
+                                to: '/memorize_word'
+                            },
+                            {
+                                name: '我的单词',
+                                desc: '',
+                                icon: '/static/img/english.svg',
+                                to: '/list'
+                            }
+                        ]
+                    },
+                    {
+                        name: '基本',
                         apps: [
                             {
                                 name: '英语卡片',
@@ -26,14 +44,8 @@
                                 icon: '/static/img/english.svg',
                                 to: '/phonetic_alphabet'
                             },
-                            {
-                                name: '背单词',
-                                desc: '',
-                                icon: '/static/img/english.svg',
-                                to: '/memorize_word'
-                            }
                         ]
-                    }
+                    },
                 ],
                 page: {
                     menu: [
